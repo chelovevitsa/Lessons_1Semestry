@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleCSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Our Bread</h1>
+    </header>
+    <div class="page-preview">
+        <div class="element">
+            <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8f334a1602e358778c8ffd3a/c4683412-b6fa-bbc0-0c8f-2c2235bc31c0.jpg">
+            <h2>Glassic Baguette</h2>
+            <p>Unbleached organic wheat flour, whole rye flour, water, sea salt, yeast</p>
+        </div>
+        <div class="element">
+            <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/33b4149aa2ba568da6fc4ccd/f45e987f-fe2f-640e-7a20-2efcdec618cb.jpg">
+            <h2>BAGUETTE</h2>
+            <p>Naturally leavened baguette made using the Five Points Levain dough. This baguette is crustier and chewier than the Classic Baguette</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/ec7affe037995acb89f03793/ghgh.jpg">
+        <h2>CARDAMON BUN</h2>
+        <p>A classic knotted Swedish sweet bun with freshly ground cardamom</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/34a9503fba495a6e9a5428d1/aaa90fbe-1b90-3607-4d63-f1658876c83f.jpg">
+        <h2>EVERYDAY FRENCH</h2>
+        <p>Everyday table loaf made using the Classic Baguette dough</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/fce79167d3fb51019c22c050/1.jpg">
+        <h2>MULTIGRAIN</h2>
+        <p>Naturally leavened bread made using the French Country dough with the additions of millet, quinoa, rolled oats, flax seeds, and sunflower seeds</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/cb3211b2f42c50f19d231553/666662.jpg">
+        <h2>DANISH RYE</h2>
+        <p>Whole rye flour, cracked rye berries, water, natural leaven culture made with rye flour, pumpkin seeds, sunflower seeds, barley malt syrup, sea salt</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/87222a54c4795e00a497aee4/gh.jpg">
+        <h2>FARMING BREAD</h2>
+        <p>Unbleached organic wheat flour, whole rye flour, water, natural leaven culture, sea salt</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e671b65ed19d5b9ea85ed1f0/ttt6.jpg">
+        <h2>CIABATTA</h2>
+        <p>Unbleached organic wheat flour, whole rye flour, water, natural leaven culture, sea salt, yeast</p>
+    </div>
+    <div class="element">
+        <img src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/60067c0411e15541880e3293/rre.jpg">
+        <h2>HANDMADE BREAD</h2>
+        <p>Naturally leavened bread made using the Sourdough Rye dough and studded with dried black currants</p>
+    </div>
+    <footer>
+        <button class="popupOpen" onclick="openPop()">© 2021 Bread. All rights reserved.</button >
+    </footer>
+    <div class="poppyContainer" id="myPop">
+        <div class="poppy" id="myPop">
+            <p>POPUP</p>
+            <button type="button" class="close" onclick="closePop()">Close</button>
+        </div>
+    </div>
+    <script>
+    function openPop() {
+        document.getElementById("myPop").style.display = "block";
+    }
+    
+    function closePop() {
+        document.getElementById("myPop").style.display = "none";
+    }
+        function generateRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+        }
+
+        const elements = document.querySelectorAll('.element');
+
+        elements.forEach((element) => {
+            element.addEventListener('mouseenter', function() {
+                const h2 = element.querySelector('h2');
+                h2.style.color = generateRandomHexColor();
+            })
+        })
+
+
+    </script>
+</body>
+</html>
